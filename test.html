@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galerie</title>
+    <style>
+        .imgEffets{
+            width: 302px;
+            height: 320px;
+            margin: 30px auto;
+        }
+        .imgEffets li{
+            list-style: none;
+            width: 141px;
+            height: 150px;
+            margin: 5px;
+            float: left;
+        }
+        .imgEffets li:nth-child(3){
+            clear: both;
+        }
+        .imgEffets img{
+            position: absolute;
+            z-index: 1;
+            height: 150px;
+            box-shadow: 0 0 3px #333333;
+            transition: .2 ease-in-out;
+        }
+        .imgEffets li:hover img{
+            z-index: 2;
+            transform: scale(1.5);
+            box-shadow: 0 0 10px #333;
+        }
+
+        .imgEffets:hover li:not(:hover) img{
+            filter: grayscale(1) blur(5px);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h2>Galerie avec effet</h2>
+    <ul class="imgEffets">
+        <li><img src="img/survol_img1.jpg" alt=""></li>
+        <li><img src="img/survol_img2.jpg" alt=""></li>
+        <li><img src="img/survol_img3.jpg" alt=""></li>
+        <li><img src="img/survol_img4.jpg" alt=""></li>
+
+    </ul>
+    
+</body>
+</html>
